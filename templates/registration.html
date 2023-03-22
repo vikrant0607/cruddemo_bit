@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+     <label for = "username">username</label>
+    <input id="username" type="text" name="username">
+    <label for = "firstname">firstname</label>
+    <input id="firstname" type="text" name="firstname">
+    <label for= "lastname">lastname </label>
+    <input id="lastname" type="text" name="lastname">
+    <label for= "email">email</label>
+    <input id="email" type="email" name="email">
+    <label for= "password">password</label>
+    <input id="password" type="password" name="password">
+    <button type="submit">Submit</button><br><br>
+    <button ><a href="{% url 'user_login' %}">login</a></button>
+
+</form>
+</body>
+</html>

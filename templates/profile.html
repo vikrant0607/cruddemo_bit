@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="{% url 'profile' %}">
+    {% csrf_token %}
+        <label for="firstname">firstname</label>
+        <input id="firstname" type="text" name="firstname" value="{{ data.first_name }}">
+        <label for="lastname">lastname </label>
+        <input id="lastname" type="text" name="lastname" value="{{ data.last_name }}">
+        <label for="mobile">mobile</label>
+        <input id="mobile" type="number" name="mobile" value="{{ data.mobile }}">
+        <label for="gender">gender</label>
+        <input id="gender" type="text" name="gender" value="{{ data.gender }}">
+        <label for="age">age</label>
+        <input id="age" type="number" name="age" value="{{ data.age }}">
+        <br><br>
+        <button type="submit">Submit</button>
+
+</form>
+{#<form method="POST" action="{% url 'delete' data.user_data_id %}">#}
+{#    {% csrf_token %}#}
+{#    <button type="submit">Delete</button>#}
+{#</form>#}
+</body>
+</html>
